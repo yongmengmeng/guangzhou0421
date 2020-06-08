@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="empty"></div>
+<script>
+    //1、获取元素
+    var empty_obj = document.getElementById("empty")
+    //2、创建元素对象p
+    var p_obj = document.createElement("p")
+    //3、创建文本对象
+    var text_obj = document.createTextNode("创建文本节点")
+    //4、添加
+    p_obj.appendChild(text_obj)
+    console.log(p_obj)
+    empty_obj.appendChild(p_obj)
+
+    // 创建元素对象
+    var input_obj = document.createElement("input")
+    //元素对象修改属性
+    input_obj.setAttribute("type","password")
+    //添加
+    p_obj.appendChild(input_obj)
+
+    //克隆，true表示将此元素所有内容都克隆一份
+    var empty_obj2 = empty_obj.cloneNode(true)
+    //添加
+    document.body.appendChild(empty_obj2)
+    //所有的子节点
+    console.log("***************",empty_obj2.childNodes)
+    //移除子节点第1个
+    // empty_obj2.removeChild(empty_obj2.childNodes[0])
+</script>
+</body>
+</html>

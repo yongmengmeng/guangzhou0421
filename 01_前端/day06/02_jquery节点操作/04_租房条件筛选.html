@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <style>
+        .active{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <dl id="quyu">
+        <dt>区域</dt>
+        <dd>南沙区</dd>
+        <dd>黄浦区</dd>
+        <dd>天河区</dd>
+        <dd>从化区</dd>
+        <dd>番禺区</dd>
+    </dl>
+    <dl id="zujin">
+        <dt>租金</dt>
+        <dd>0-500</dd>
+        <dd>500-1500</dd>
+        <dd>1500-3000</dd>
+        <dd>3000~</dd>
+    </dl>
+    <dl id="mianji">
+        <dt>面积</dt>
+        <dd>1室</dd>
+        <dd>2室</dd>
+        <dd>3室</dd>
+    </dl>
+    <dl id="tiaojian">
+        <dt>清除条件</dt>
+
+    </dl>
+</div>
+<script>
+    $("#quyu dd,#zujin dd,#mianji dd").click(function () {
+        //高亮
+        $(this).addClass("active").siblings().removeClass("active")
+        // $("#tiaojian").append($(this).clone(true))//克隆
+        //删除原始元素
+        $("#tiaojian dd").remove()
+        //获取高亮元素,each循环
+        $(".active").each(function(){
+            //添加新的元素
+            $("#tiaojian").append($(this).clone(true).removeClass("active"))
+        })
+    })
+</script>
+</body>
+</html>

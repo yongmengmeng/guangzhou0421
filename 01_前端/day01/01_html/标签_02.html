@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签-表格</title>
+</head>
+<body>
+<!--
+    table：声明一个表格
+        border:每个单元格的边框
+        width：表格的总宽度
+        height：表格的总高度
+        cellspacing：单元格之间的间距
+        cellpadding：单元格的内边距填充
+     tr：行
+     td：列
+        align：水平方向
+        valign：垂直方向
+-->
+<table border="1" width="500" height="500" cellspacing="0" cellpadding="0">
+    <tr align="center">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td align="left">4</td>
+    </tr>
+    <tr valign="bottom">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <th>1</th>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+</table>
+<hr>
+<hr>
+<table border="1" width="500" height="500" cellspacing="0" cellpadding="0">
+    <caption>课程表</caption>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+</table>
+<hr>
+<hr>
+<table border="1" width="500" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>城市</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>张三</td>
+            <td>20</td>
+            <td>广州</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>21</td>
+            <td>珠海</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>22</td>
+            <td>佛山</td>
+        </tr>
+    </tbody>
+<!--    <tfoot>-->
+<!--        <td><a href="#">1</a></td>-->
+<!--        <td><a href="#">2</a></td>-->
+<!--        <td><a href="#">3</a></td>-->
+<!--    </tfoot>-->
+    <tfoot>
+        <td colspan="3">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+        </td>
+    </tfoot>
+</table>
+
+<hr>
+<hr>
+<table border="1" width="500" height="500" cellspacing="0" cellpadding="0">
+    <tr>
+        <td colspan="4" align="center">课程表</td>
+    </tr>
+    <tr>
+        <td rowspan="2">上午</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td rowspan="4">下午</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+</table>
+</body>
+</html>

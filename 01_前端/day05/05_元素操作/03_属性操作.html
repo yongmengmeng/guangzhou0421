@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <img id="myimg" src="./img/lian1.png" title="lian1.png" alt="lian1.png">
+    <script>
+        console.log($("#myimg"))
+        //属性的获取
+        console.log($("#myimg").attr("src"))
+        //属性的设置
+        // $("#myimg").attr("src","./img/lian2.png")
+        $("#myimg").attr({"src":"./img/lian2.png","title":"lian2.png"})
+    </script>
+</body>
+</html>

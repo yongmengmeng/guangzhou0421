@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .xx{
+            font-weight: bolder;
+            color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content1"></div>
+    <div id="content2"></div>
+    <script>
+        //1、获取元素
+        var content1 = document.getElementById("content1")
+        var content2 = document.getElementById("content2")
+        //2、设置HMTL
+        content1.innerHTML = "<p>今天是星期<span class='xx'>三</span></p>"
+        //3、设置文本
+        content2.innerText = "<p>今天是星期<span class='xx'>三</span></p>"
+
+        //4、获取
+        console.log(content1.innerHTML,content1.innerText)
+    </script>
+</body>
+</html>

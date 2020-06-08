@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="div1">div1</div>
+<div class="div2"></div>
+<div class="div2"></div>
+<form action="/myaction" method="get">
+        <input type="hidden" value="1234567" name="student_id">
+        <table>
+            <tr>
+                <td>用户名</td>
+                <td><input type="text" name="username" placeholder="请输入用户名"></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" name="userpwd"></td>
+            </tr>
+            <tr>
+                <td>头像</td>
+                <td><input type="file" name="pic"></td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>
+                    <input type="radio" name="sex" checked value="1">男
+                    <input type="radio" name="sex" value="0">女
+                </td>
+            </tr>
+            <tr>
+                <td>爱好</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="pingpangqiu">乒乓球
+                    <input type="checkbox" name="hobby" value="lanqiu">篮球
+                    <input type="checkbox" name="hobby" value="wangqiu">网球
+                </td>
+            </tr>
+            <tr>
+                <td>城市</td>
+                <td>
+                    <select name="city">
+                        <option value="guangzhou">广州</option>
+                        <option value="zhuhai">珠海</option>
+                        <option value="baiyun" selected>白云</option>
+                        <option value="foshan">佛山</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>简介</td>
+                <td>
+                    <textarea name="description" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="确定"></td>
+                <td><input type="reset" value="重置"></td>
+            </tr>
+        </table>
+    </form>
+<script>
+    //根据id获取
+    var div1 = document.getElementById("div1")
+    console.log(div1)
+
+    //根据class name获取
+    var div2 = document.getElementsByClassName("div2")
+    console.log(div2,div2.length,div2[0])
+
+    //根据tag获取
+    var div = document.getElementsByTagName("div")
+    console.log(div)
+
+    //根据name获取
+    var sex = document.getElementsByName("sex")
+    console.log(sex)
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var datas = [
+            {name: "草莓", pic: "草莓.jpg", price: 16.8, num: 6},
+            {name: "葡萄", pic: "葡萄.jpg", price: 5.7, num: 10},
+            {name: "香蕉", pic: "香蕉.jpg", price: 8.7, num: 4},
+            {name: "蜜桔", pic: "蜜桔.jpg", price: 3.5, num: 5}
+        ]
+        for (var i in datas) {
+            console.log(i, datas[i])
+        }
+    </script>
+    <style>
+        table {
+            width: 600px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td, th {
+            border: 1px solid black;
+        }
+        table img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>图片</th>
+        <th>价格</th>
+        <th>数量</th>
+    </tr>
+    </thead>
+    <tbody>
+    <script>
+        var datas = [
+            {name: "草莓", pic: "草莓.jpg", price: 16.8, num: 6},
+            {name: "葡萄", pic: "葡萄.jpg", price: 5.7, num: 10},
+            {name: "香蕉", pic: "香蕉.jpg", price: 8.7, num: 4},
+            {name: "蜜桔", pic: "蜜桔.jpg", price: 3.5, num: 5}
+        ]
+        var trs = ""
+        for (var i in datas) {
+            trs = trs+"<tr><td>"+datas[i]["name"]+"</td><td><img src='./img/"+datas[i]["pic"]+"'></td><td>"+datas[i]["price"]+"</td><td>"+datas[i]["num"]+"</tr>"
+        }
+        document.write(trs)
+    </script>
+    </tbody>
+</table>
+</body>
+</html>

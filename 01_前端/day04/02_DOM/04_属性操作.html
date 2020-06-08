@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .xx{
+            color: red;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/lian1.png" class="xx" id="yy" alt="lian" title="变脸">
+    <div>div</div>
+<script>
+    //1、获取标签
+    var img_obj = document.getElementById("yy")
+    //2、判断是否拥有属性
+    console.log(img_obj.hasAttribute("class"),img_obj.hasAttribute("alt"),img_obj.hasAttribute("style"))
+
+    var content = document.getElementsByTagName("div")[0]
+    console.log(img_obj.hasAttributes(),content.hasAttributes())
+
+    //设置属性
+    img_obj.setAttribute("src","./img/lian2.png")
+    content.setAttribute("class","xx")
+
+    //获取属性
+    console.log(img_obj.getAttribute("src"),img_obj.getAttribute("style"))
+
+    //删除属性
+    img_obj.removeAttribute("title")
+</script>
+</body>
+</html>

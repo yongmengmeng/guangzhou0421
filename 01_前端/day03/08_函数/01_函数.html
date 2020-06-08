@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // js解析的时候优先解析函数，将函数放到内存
+        // 函数的定义
+        function say_hello(num1, num2) {
+            console.log("sayhello...")
+            console.log(num1 + num2)
+        }
+
+        // 函数的调用
+        say_hello(1, 2)
+
+
+        // 函数的定义
+        function say_hello2(num1, num2) {
+            console.log("sayhello2...", arguments)
+            console.log(arguments[0] + arguments[1])
+        }
+
+        // 函数的调用
+        say_hello2(1, 2)
+
+
+        // 函数的定义
+        // 此时arguments拿不到默认值
+        function say_hello3(num1, num2 = 100) {
+            console.log("sayhello3...", arguments)
+            console.log(num1 + num2)
+        }
+
+        // 函数的调用
+        say_hello3(1)
+        say_hello3(1, 2)
+
+
+        // 函数的定义
+        // 此时arguments拿不到默认值
+        function say_hello4(num1, num2 = 100) {
+            console.log("sayhello4...")
+            // return num1+num2
+            // return
+        }
+
+        // 函数的调用
+        console.log(say_hello4(1, 2))
+
+
+        //定义匿名函数
+        var myfunc = function (a, b) {
+            return a + b
+        }
+        console.log(myfunc, myfunc(1, 2));
+
+        //定义自运行函数,注意这里需要使用；与前后隔开
+        (function (a, b) {
+            console.log("halou", a + b)
+        })(1, 2);
+
+        (function () {
+            console.log("halou2")
+        })();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

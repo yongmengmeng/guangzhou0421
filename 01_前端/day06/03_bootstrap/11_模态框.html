@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--
+        btn：按钮
+        btn-primary：样式
+        data-target：触发的模态框id选择器
+        data-toggle：模态框的开关
+    -->
+    <button class="btn btn-primary" data-target="#myModal" data-toggle="modal">单击激活</button>
+    <!--
+        modal：模态框
+        id：唯一标识
+    -->
+    <div class="modal" id="myModal">
+        <!--
+        modal-content：模态框内容
+            modal-header:头
+            modal-modal-body:体
+            modal-footer:尾
+        -->
+        <div class="modal-content">
+            <div class="modal-header">
+<!--                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>-->
+                <h4>删除用户</h4>
+            </div>
+            <div class="modal-body">
+                <p>次用户为管理员</p>
+                <p>确认要删除吗？</p>
+                <p>真的要删除吗？</p>
+            </div>
+            <div class="modal-footer">
+                <!--
+                data-dismiss：关闭模态框
+                -->
+                <button class="btn bg-info" data-dismiss="modal">取消</button>
+                <button class="btn bg-info" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

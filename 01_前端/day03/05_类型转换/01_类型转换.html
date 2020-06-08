@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var num = 100;
+        console.log(num,typeof num)
+
+        // 转字符串
+        var num2 = String(num)
+        console.log(num2,typeof num2)
+
+
+        var s = "123"
+        console.log(s,typeof s)
+
+        // 转数字
+        var s2 = Number(s)
+        console.log(s2,typeof s2)
+        // 转数字，如果失败，NaN  Not a number
+        console.log(parseInt("123"),parseInt("123.456"),parseInt(123.456),parseInt("123.456abc"),parseInt("xx123.456abc"))
+        console.log(parseFloat("123"),parseFloat("123.456"),parseFloat(123.456),parseFloat("123.456abc"),parseFloat("xx123.456abc"))
+
+        // 转布尔
+        console.log(Boolean("a"),Boolean("1"),Boolean("0"),Boolean(0),Boolean(null),Boolean(undefined),Boolean(""))
+    </script>
+</head>
+<body>
+
+</body>
+</html>

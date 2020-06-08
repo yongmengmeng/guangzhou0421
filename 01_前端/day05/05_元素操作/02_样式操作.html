@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .myclass1{
+            font-size: 40px;
+            background-color: bisque;
+        }
+        .myclass2{
+            color: white;
+        }
+    </style>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <!--<script>
+        $(function(){
+            //获取
+            console.log($("#myspan").css("fontSize"))
+            //设置单个属性
+            $("#myspan").css("fontSize","60px")
+            //设置多个属性
+            $("#myspan").css({"fontSize":"60px","backgroundColor":"red","color":"white"})
+        })
+    </script>-->
+    <script>
+        $(function(){
+            //一般jquery对象调用方法后，还是当前对象。但是关系除外比如parent
+            //增加
+            // $("#myspan").addClass("myclass1").addClass("myclass2")
+            // $("#myspan").removeClass("myclass2")
+            //有就去掉，没有就加上
+            $("#myspan").toggleClass("myclass1")
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">div1</div>
+    <div class="div2">div2-1</div>
+    <div class="div2">div2-2</div>
+    <p>p1</p>
+    <p>p2</p>
+    <img src="./img/lian1.png" title="lian1.png" alt="lian1.png">
+    <img src="./img/lian2.png" alt="lian2.png">
+    <div id="div2">
+        <p>div221</p>
+        <p>div<span>222</span><a href="#">我是a</a></p>
+        <span id="myspan">333</span>
+        <p>xxx</p>
+        <a href="#">我是a2</a>
+    </div>
+    <div id="div3">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</body>
+</html>

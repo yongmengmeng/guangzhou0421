@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #pic {
+            width: 120px;
+            margin: 0 auto;
+        }
+
+        #btn {
+            width: 120px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="pic"><img id="picture" src="./img/lian1.png"></div>
+<div id="btn">
+    <button id="left"><</button>
+    <button id="right">></button>
+</div>
+
+<script>
+    var tp = [
+        "./img/lian1.png",
+        "./img/lian2.png",
+        "./img/lian3.png",
+        "./img/lian4.png"];
+    var picture = document.getElementById("picture");
+    // 设置图片
+    var i = 0;
+    var interval = setInterval(function () {
+        i += 1;
+        if (i > 3) {
+            i = 0;
+        }
+        picture.setAttribute("src", tp[i])
+    }, 1000);
+
+    // 设置按钮
+    var left = document.getElementById("left");
+    left.onclick = function () {
+        //停止定时器
+        clearInterval(interval);
+        i -= 1;
+        if (i < 0) {
+            i = 3;
+        }
+        picture.setAttribute("src", tp[i]);
+        //开启定时器
+        interval = setInterval(function () {
+            i += 1;
+            if (i > 3) {
+                i = 0;
+            }
+            picture.setAttribute("src", tp[i])
+        }, 1000);
+    };
+    var right = document.getElementById("right");
+    right.onclick = function () {
+        i += 1;
+        if (i > 3) {
+            i = 0;
+        }
+        picture.setAttribute("src", tp[i]);
+    }
+</script>
+</body>
+</html>

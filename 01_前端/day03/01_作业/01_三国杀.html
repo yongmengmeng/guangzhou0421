@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .up{
+            height: 196px;
+            width: 120px;
+            background-color: black;
+            float: left;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .up img{
+            /*padding: 25px;*/
+        }
+
+        .up p{
+            font-family: 楷体;
+            color: white;
+            text-align: center;
+        }
+
+        .middle{
+            width: 410px;
+        }
+        .middle p{
+            text-align: center;
+            font-size: 25px;
+        }
+        .floatclear:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="floatclear">
+        <div class="up"><img src="./img/貂蝉.png"><p>貂蝉</p></div>
+        <div class="up"><img src="./img/貂蝉.png"><p>貂蝉</p></div>
+        <div class="up"><img src="./img/貂蝉.png"><p>貂蝉</p></div>
+    </div>
+    <div class="middle">
+        <p>vs</p>
+    </div>
+    <div class="floatclear">
+        <div class="up"><img src="./img/貂蝉.png"><p>貂蝉</p></div>
+        <div class="up"><img src="./img/貂蝉.png"><p>貂蝉</p></div>
+        <div class="up"><img src="./img/貂蝉.png"><p>貂蝉</p></div>
+    </div>
+
+</body>
+</html>

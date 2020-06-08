@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-family: 楷体;
+        }
+        ul{
+            list-style: none;
+            width: 1058px;
+            margin: 0 auto;
+        }
+        li{
+            float: left;
+            width: 150px;
+            height: 30px;
+            /*设置行高，可以让里面的行内标签文字垂直居中的效果*/
+            line-height: 30px;
+            border: 1px solid red;
+            /*可以让内部行内标签文字居中*/
+            text-align: center;
+        }
+        li:hover{
+            background-color: red;
+        }
+        li:hover a{
+            color: white;
+        }
+
+        .right_border{
+            border-right-width: 0px;
+        }
+        .clearfix:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        分析：
+            有排列建议使用ul li
+        实现：
+            平时积累
+            加上样式之后刷新测试一下
+
+    -->
+    <ul class="clearfix">
+        <li class="right_border">
+            <a href="#">首页</a>
+        </li>
+        <li class="right_border">
+            <a href="#">公司简介</a>
+        </li>
+        <li class="right_border">
+            <a href="#">公司简介</a>
+        </li>
+        <li class="right_border">
+            <a href="#">公司简介</a>
+        </li>
+        <li class="right_border">
+            <a href="#">公司简介</a>
+        </li>
+        <li class="right_border">
+            <a href="#">公司简介</a>
+        </li>
+        <li>
+            <a href="#">公司简介</a>
+        </li>
+    </ul>
+</body>
+</html>

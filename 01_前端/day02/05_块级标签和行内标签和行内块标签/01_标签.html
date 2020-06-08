@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1, #div2 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+        #div3 span {
+            background-color: red;
+            color: white;
+            width: 500px;
+        }
+
+        #div4 img {
+            width: 300px;
+            /*消失不显示了*/
+            display: none;
+        }
+
+        #div5, #div6 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            /*行内块*/
+            /*display: inline-block;*/
+            /*行内*/
+            /*display: inline;*/
+        }
+        #div7 span{
+            width:200px;
+            border: 1px solid red;
+            /*display: inline-block;*/
+            /*块*/
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<!--
+块级标签：自己独占一大块，不与其他标签分享空间
+-->
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">
+    <!--
+    行内标签：与其他标签分享空间
+        不支持设置宽和高
+    -->
+    <span>span1</span>
+    <span>span2</span>
+</div>
+<div id="div4">
+    <!--
+    行内块：与其他标签分享空间，支持设置宽和高
+    -->
+    <img src="./img/toudianping.jpg">
+    <img src="./img/toudianping.jpg">
+</div>
+<hr>
+<div id="div5">div5</div>
+<div id="div6">div6</div>
+<hr>
+<div id="div7">
+    <span>span1</span>
+    <span>span2</span>
+</div>
+</body>
+</html>

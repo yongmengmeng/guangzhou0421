@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .mydiv{
+            width: 100px;
+            height: 200px;
+            background-color: antiquewhite;
+            padding: 10px;
+            border: 1px solid red;
+            position: absolute;
+            left:100px;
+            top:50px
+        }
+    </style>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            //偏移量
+            console.log($(".mydiv").offset())
+            console.log($(".mydiv").offset().top)
+            console.log($(".mydiv").offset().left)
+        })
+    </script>
+</head>
+<body>
+    <div class="mydiv">
+
+    </div>
+</body>
+</html>

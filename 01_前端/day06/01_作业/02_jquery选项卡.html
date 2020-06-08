@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery选项卡</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            width: 302px;
+            height: 302px;
+            margin: 0 auto;
+        }
+        .title{
+            width: 300px;
+            border: 1px solid #9a9da2;
+            border-bottom: 0px;
+        }
+        .title li {
+            float: left;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .title li.cursor {
+            background-color: #9a9da2;
+            color: #ffffff;
+        }
+        .content{
+            width: 300px;
+            border: 1px solid #9a9da2;
+        }
+
+        .content div {
+            float: left;
+            width: 300px;
+            height: 260px;
+            line-height: 260px;
+            text-align: center;
+            display: none;
+        }
+
+        .content div.cursor {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul class="title clearfix">
+        <li class="cursor">我的关注</li>
+        <li>推荐</li>
+        <li>导航</li>
+    </ul>
+    <div class="content clearfix">
+        <div class="cursor">我的关注-详情</div>
+        <div>推荐-详情</div>
+        <div>导航-详情</div>
+    </div>
+</div>
+
+</html>

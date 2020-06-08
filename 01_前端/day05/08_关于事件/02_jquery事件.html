@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <input type="button" value="单击试试" id="btn">
+    <ol type="A">
+        <li>星期1</li>
+        <li>星期2</li>
+        <li>星期3</li>
+        <li>星期4</li>
+        <li>星期5</li>
+    </ol>
+    <script>
+        $("#btn").click(function(){
+            alert("哈喽")
+        })
+        $("li").click(function(){
+            //this标签当前对象，this是js对象，支持js的方法，不支持jquey的方法
+            //js对象--转-->jquery对象：$(js对象)
+            //jquery对象--转-->js对象：jquery对象[索引]
+            alert($(this).text())
+            // console.log($("ol")[0])
+            // console.log($("ol")[0].getAttribute("type"))
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //1、定义正则对象,qq邮箱
+        var re = /^\d{5,12}@qq\.com$/
+        //2、test true,false
+        console.log(re.test("1243324@qq.com"))
+        console.log(re.test("12d43324@qq.com"))
+
+        var msg = "hello1,world2"
+        var re = /[a-zA-Z]+/
+        console.log(re.exec(msg))
+
+        //字符串中也有方法支持正则，比如match
+        var msg = "hello1,World2"
+        // i忽略大小写，g全局
+        console.log(msg.match(/[a-z]+/ig))
+    </script>
+</body>
+</html>

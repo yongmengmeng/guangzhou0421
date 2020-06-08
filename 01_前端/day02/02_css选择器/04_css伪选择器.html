@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_css伪选择器</title>
+    <style>
+        #content{
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse ;
+        }
+        /*hover悬停 滑过*/
+        #content:hover{
+            width: 300px;
+            background-color: red ;
+        }
+
+        #div1:after{
+            content: "我是后来的";
+        }
+         #div1:before{
+            content: "我是前面的";
+        }
+    </style>
+</head>
+<body>
+    <div id="content" style="height: 400px">
+
+    </div>
+    <div id="div1">div1</div>
+</body>
+</html>

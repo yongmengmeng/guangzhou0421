@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--
+        设置固定宽度还是100%
+    -->
+    <div class="container-fluid">
+        <!--
+        设置row，为分列做准备
+        -->
+        <div class="row">
+            <!--
+                nav：去掉ul左侧的点
+                nav-tabs：tab式
+                col-md-3：宽度
+                pull-left：浮动到左侧
+            -->
+            <ul class="nav nav-tabs col-md-3 pull-left">
+                <li><a href="#">个人信息</a></li>
+                <!--
+                active：激活状态，样式设置
+                -->
+                <li class="active"><a href="#">订单信息</a></li>
+                <li><a href="#">地址管理</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <!--
+                nav-pills：胶囊式
+            -->
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#">个人信息</a></li>
+                <li><a href="#">订单信息</a></li>
+                <li><a href="#">地址管理</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

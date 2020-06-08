@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签-表单</title>
+</head>
+<body>
+    <!--
+        form：表单元素，提交数据给后端服务器的
+        table：这里只是用来布局，与form无关
+        input：input元素
+            type="text"：文本框，默认值
+            type="password"：密码框
+            type="submit"：提交按钮
+            type="reset"：重置按钮
+            type="radiao"：单选框
+                多个单选name要一致，并且设置value属性
+            type="checkbox"：多选框
+                多个单选name要一致，并且设置value属性
+            type="file"：文件
+            type="hidden"：隐藏
+
+        action：提交的地址
+        method：提交的方式
+            get:参数会拼接到url中，一般不建议将敏感信息放在这里，不能上传超过4kb
+            post:参数不会拼接到url中，相对get，更安全，文件上传必须使用post
+        enctype：数据类型
+            application/x-www-form-urlencoded：非文件上传，默认值，可以不写
+            multipart/form-data：文件上传必须这是这个值，同时method设置为post
+
+
+       select:下拉框
+        select设置name,option设置value
+       textarea:文本域
+    -->
+<!--    <form action="/myaction" method="post" enctype="multipart/form-data">-->
+    <form action="/myaction" method="get">
+        <input type="hidden" value="1234567" name="student_id">
+        <table>
+            <tr>
+                <td>用户名</td>
+                <td><input type="text" name="username" placeholder="请输入用户名"></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" name="userpwd"></td>
+            </tr>
+            <tr>
+                <td>头像</td>
+                <td><input type="file" name="pic"></td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>
+                    <input type="radio" name="sex" checked value="1">男
+                    <input type="radio" name="sex" value="0">女
+                </td>
+            </tr>
+            <tr>
+                <td>爱好</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="pingpangqiu">乒乓球
+                    <input type="checkbox" name="hobby" value="lanqiu">篮球
+                    <input type="checkbox" name="hobby" value="wangqiu">网球
+                </td>
+            </tr>
+            <tr>
+                <td>城市</td>
+                <td>
+                    <select name="city">
+                        <option value="guangzhou">广州</option>
+                        <option value="zhuhai">珠海</option>
+                        <option value="baiyun" selected>白云</option>
+                        <option value="foshan">佛山</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>简介</td>
+                <td>
+                    <textarea name="description" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="确定"></td>
+                <td><input type="reset" value="重置"></td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+    <input type="button" value="按钮1">
+    <button>按钮2</button>
+    <input type="text" value="我爱北京天安门" readonly>
+    <input type="button" value="按钮3" disabled>
+</body>
+</html>

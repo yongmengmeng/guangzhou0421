@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            //id选择器
+            $("#div1").css("background","red")
+            //class选择器
+            $(".div2").css("background","blue")
+            //tag标签器
+            // $("p").css("fontSize","50px")
+            //属性选择器
+            // $("[alt]").css("width","200px")
+            $("[alt='lian1.png']").css("width","200px")
+            //后代选择器
+            // $("#div2 span").css("fontSize","50px")
+            $("#div2 > span").css("fontSize","50px")
+            //first,last,eq索引
+            // $("#div3 span:first").css("fontSize","50px")
+            // $("#div3 span:last").css("fontSize","50px")
+            $("#div3 span:eq(1)").css("fontSize","50px")
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">div1</div>
+    <div class="div2">div2-1</div>
+    <div class="div2">div2-2</div>
+    <p>p1</p>
+    <p>p2</p>
+    <img src="./img/lian1.png" title="lian1.png" alt="lian1.png">
+    <img src="./img/lian2.png" alt="lian2.png">
+    <div id="div2">
+        <p>div221</p>
+        <p>div<span>222</span></p>
+        <span>333</span>
+    </div>
+    <div id="div3">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</body>
+</html>

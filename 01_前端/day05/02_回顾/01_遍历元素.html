@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>python</li>
+    <li>java</li>
+    <li>php</li>
+    <li>ui</li>
+    <li>大数据</li>
+</ul>
+<script>
+    //这里返回的对象还不完全是数组，是一个对象
+    //但是拥有数据的属性1、索引 2、长度
+    var lis = document.getElementsByTagName("li")
+    console.log(lis, typeof lis)
+    // 遍历的第一种方式，对于返回的元素集合，会获取所用属性，不仅仅是索引
+    /*for(var i in lis){
+        console.log(i,lis[i])
+    }*/
+    /*var nums = [1,2,3,4]
+    for(var i in nums){
+        console.log(i,nums[i])
+    }*/
+    //遍历的第二种方式，推荐使用这种
+    for (var i = 0; i < lis.length; i++) {
+        console.log(i, lis[i])
+    }
+
+    /*结论：
+    * 1、遍历的是元素集合，类似于数组。使用for(var i=0;i<lis.length;i++)方式遍历
+    * 2、如果是遍历对象，获取属性，使用for(var i in nums)
+    * */
+
+    var person = {
+        "name": "张三",
+        "age": 20
+    }
+    for (var i in person) {
+        console.log(i, person[i])
+    }
+</script>
+</body>
+</html>

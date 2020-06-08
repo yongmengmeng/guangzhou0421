@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05_css优先级</title>
+    <style>
+        #mydiv a{
+            color: red;
+        }
+        body .xx a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv" class="xx">
+        <a href="#jingyesi">回到顶部</a>
+        <a href="#location">回到需要的位置</a>
+        <div>
+            <a href="#">看看我是什么颜色</a>
+        </div>
+    </div>
+</body>
+</html>

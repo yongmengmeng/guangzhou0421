@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var msg = "我爱北京天安门"
+        for(var i in msg){
+            console.log(i,msg[i])
+        }
+    </script>
+    <script>
+        var msg = "我爱北京天安门"
+        for(var i=0;i<msg.length;i++){
+            console.log(i,msg[i])
+        }
+    </script>
+    <script>
+        /*var msg = "我爱北京天安门"
+        // 死循环
+        for(var i=0;i<msg.length;i--){
+            console.log(i,msg[i])
+        }*/
+    </script>
+    <script>
+        var msg = "我爱北京天安门"
+        var i = 0
+        while(i<msg.length){
+            console.log(i,msg[i])
+            i++
+        }
+    </script>
+    <script>
+        for(var i=1;i<11;i++){
+            for(var j=11;j<21;j++){
+                console.log(i,j)
+            }
+        }
+    </script>
+    <script>
+        for(var i=1;i<11;i++){
+            for(var j=11;j<21;j++){
+                if(i==5 && j==15){
+                    console.log("*****************************")
+                    break
+                }
+                console.log(i,j)
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

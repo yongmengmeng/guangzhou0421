@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            // $("#myspan").prev().css("fontSize","50px")
+            // $("#myspan").prev().children().css("fontSize","50px")
+            //注意连写，别找错对象了
+            // $("#myspan").prev().children("span").css("fontSize","50px")
+            // $("#myspan").siblings().css("fontSize","50px")
+            // $("#myspan").siblings("a").css("fontSize","50px")
+            // console.log($("#myspan").parent())
+            // $("#myspan").parent().children("p:eq(2)").css("fontSize","50px")
+            console.log($("#myspan").parents())
+            $("#myspan").parents("body").css("backgroundColor","gray")
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">div1</div>
+    <div class="div2">div2-1</div>
+    <div class="div2">div2-2</div>
+    <p>p1</p>
+    <p>p2</p>
+    <img src="./img/lian1.png" title="lian1.png" alt="lian1.png">
+    <img src="./img/lian2.png" alt="lian2.png">
+    <div id="div2">
+        <p>div221</p>
+        <p>div<span>222</span><a href="#">我是a</a></p>
+        <span id="myspan">333</span>
+        <p>xxx</p>
+        <a href="#">我是a2</a>
+    </div>
+    <div id="div3">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css属性选择器</title>
+    <style>
+        a[alt="图片未加载"]{
+            font-size: 30px;
+        }
+        a[title^="a"]{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div><a href="#" title="" alt="图片未加载">a1</a></div>
+    <div><a href="#" title="" alt="图片未加载">a2</a></div>
+    <div><a href="#" title="a3">a3</a></div>
+    <div><a href="#" title="a4">a4</a></div>
+</body>
+</html>

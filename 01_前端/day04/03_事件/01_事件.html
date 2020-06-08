@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        console.log(document.getElementById("dg"))
+        //整个窗体加载完毕事件
+        window.onload = function () {
+            console.log(document.getElementById("dg"))
+        }
+    </script>
+</head>
+<body>
+    <button id="add_bg">添加蛋糕</button>
+    <p id="dg">蛋糕</p>
+    <div id="foods">
+        选择的商品：
+    </div>
+    <hr>
+    <div>
+        <input id="username" name="username">
+    </div>
+    <div>
+        <input id="num" name="num">
+    </div>
+    <script>
+        //1、找到标签
+        var btn = document.getElementById("add_bg")
+        var p = document.getElementById("dg")
+        var foods = document.getElementById("foods")
+        //2、绑定事件  元素对象.事件 = function(){}
+        btn.onclick = function () {
+            // foods.appendChild(p.cloneNode(true))
+            foods.appendChild(p)
+        }
+
+        //失去光标事件
+        var username_obj = document.getElementById("username")
+        username_obj.onblur = function () {
+            // var value = username_obj.value
+            //这个函数是元素对象触发之后调用的，当前对象就是当前元素
+            var value = this.value
+            alert(value)
+        }
+        //获取光标事件
+        username_obj.onfocus = function () {
+            console.log("获取光标了，可以输入用户名了。。。")
+        }
+
+        //获取元素对象
+        var num = document.getElementById("num")
+        //键盘摁下事件
+        /*num.onkeydown = function () {
+            console.log(1)
+        }
+        //键盘摁下后压着不放事件
+        num.onkeypress = function () {
+            console.log(2)
+        }
+        //键盘弹起事件
+        num.onkeyup = function () {
+            console.log(3)
+        }*/
+
+        //事件函数中的参数，名字随意，表示当前事件对象
+        num.onkeydown = function (e) {
+            console.log(e)
+            console.log("摁下的键是："+e.key)
+        }
+    </script>
+</body>
+</html>

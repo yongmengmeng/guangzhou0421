@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <style>
+        div{
+            width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        img{
+            width: 600px;
+            height: 300px;
+            position: absolute;
+            left: 0px;
+            top:0px
+        }
+        #img1{
+            z-index: 1;
+        }
+        /*#img2{
+            !*当元素叠加的时候可以设置z-index*!
+            !*z-index大的在上面*!
+            z-index: 1;
+        }
+        #img3{
+            !*当元素叠加的时候可以设置z-index*!
+            !*z-index大的在上面*!
+            z-index: 2;
+        }*/
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./img/gtx.jpg" id="img1">
+        <img src="./img/hgf.jpg" id="img2">
+        <img src="./img/ljr.jpg" id="img3">
+        <img src="./img/mgdz.jpg" id="img4">
+    </div>
+    <script>
+        //初始值
+        var i = 0
+        //jquery对象的长度
+        var length = $("img").length
+        //定时器
+        var interval = setInterval(function(){
+            //$("img").eq(i)获取jquery对象集合中的第i个对象
+            $("img").eq(i).css("z-index",1).siblings().css("z-index",0)
+            i++
+            if(i>=length){
+                i=0
+            }
+        },1000)
+    </script>
+</body>
+</html>

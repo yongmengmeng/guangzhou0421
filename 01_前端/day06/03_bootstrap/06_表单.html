@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--
+        form：标签
+        form-horizontal：设置每一组在一行中
+    -->
+    <form action="" method="post" class="form-horizontal">
+        <!--
+        form-group：组成1组
+        -->
+        <div class="form-group">
+            <!--
+            col-md-2：宽度
+            control-label：文字label样式
+            -->
+            <label class="col-md-2 control-label">用户名</label>
+            <div class="col-md-6">
+                <!--
+                    form-control:form控件样式
+                -->
+                <input type="text" class="form-control" name="username" placeholder="用户名">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">密码</label>
+            <div class="col-md-6">
+                <input type="password" class="form-control" name="username" placeholder="密码">
+            </div>
+        </div>
+    </form>
+    <hr>
+    <form action="" method="post" class="form-horizontal">
+        <!--
+            input-group：input组
+        -->
+        <div class="input-group">
+            <input class="form-control" type="text">
+            <!--
+                input-group-addon：图标样式
+            -->
+            <span class="input-group-addon">@</span>
+        </div>
+    </form>
+</body>
+</html>

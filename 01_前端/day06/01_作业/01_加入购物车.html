@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <style>
+        #shop {
+            width: 120px;
+            height: 40px;
+            border: 1px solid black;
+            position: relative;
+            left: 1000px;
+            top: 30px;
+            text-align: center;
+        }
+
+        #goods {
+            width: 120px;
+            height: 40px;
+            border: 1px solid black;
+            position: relative;
+            left: 10px;
+            top: 400px;
+            text-align: center;
+            background: green;
+        }
+
+        #red {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            background: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="shop">购物车<span>0</span></div>
+
+<div id="goods">商品</div>
+<div id="red"></div>
+<script>
+    //单击事件
+    $("#goods").click(function () {
+        //修改样式
+        $("#red").css({
+            "left":$("#goods").offset().left+($("#goods").outerWidth()-$("#red").outerWidth())/2,
+            "top":$("#goods").offset().top+($("#goods").outerHeight()-$("#red").outerHeight())/2
+        }).show()
+        //动画
+        $("#red").stop(true).animate({
+            "left":$("#shop").offset().left+($("#shop").outerWidth()-$("#red").outerWidth())/2,
+            "top":$("#shop").offset().top+($("#shop").outerHeight()-$("#red").outerHeight())/2
+        },1000,function(){
+            $("#red").hide()
+            //文字
+            $("#shop span").text(parseInt($("#shop span").text())+1)
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 100px
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<div>
+    <input id="stop" type="button" value="停止">
+    <input id="start" type="button" value="继续">
+</div>
+<script>
+    //1、获取对象
+    var box = document.getElementById("box")
+    var stop = document.getElementById("stop")
+    var start = document.getElementById("start")
+    //2、定时器，可以接收返回值，用于停止
+    var interval = setInterval(function () {
+        //box.offsetTop获取top
+        box.style.top = box.offsetTop + 10 + "px"
+    }, 100)
+    //3、绑定onclick事件
+    stop.onclick = function () {
+        //清除定时器
+        clearInterval(interval)
+    }
+    start.onclick = function () {
+        //清除定时器
+        interval = setInterval(function () {
+            //box.offsetTop获取top
+            box.style.top = box.offsetTop + 10 + "px"
+        }, 100)
+    }
+</script>
+</body>
+</html>

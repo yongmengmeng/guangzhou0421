@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<div id="content">
+    <span>hello</span>
+</div>
+<script>
+    //创建节点对象
+    var $div = $("<div>我不瞌睡</div>")
+    console.log($div)
+
+    var $p = $("<p>我要好好学习</p>")
+    var $p2 = $("<p>我要好好学习2</p>")
+    var $p3 = $("<p>我要好好学习3</p>")
+    var $p4 = $("<p>我要好好学习4</p>")
+    console.log($p)
+
+    //插入节点，作为子节点
+    $("#content").append($p)
+    $("#content").prepend($p2)
+
+    //插入节点，作为兄弟节点
+    $("#content").after($p3)
+    $("#content").before($p4)
+</script>
+</body>
+</html>

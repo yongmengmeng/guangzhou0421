@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //创建对象
+        var person = new Object();
+        //设置属性
+        person.firstName = "王";
+        person.lastName = "二";
+        person.money = function () {
+            console.log("工作...")
+        }
+        //调用对象
+        console.log(person)
+        console.log(person.firstName)
+        person.money()
+
+
+        //定义对象，这种一般称为"json"，类似于Python中的字典
+        var person2 = {
+            "firstName": "王",
+            "lastName": "王",
+            "money": function () {
+                console.log("工作...")
+            }
+        }
+
+        //调用对象
+        console.log(person2)
+        console.log(person2.firstName)
+        person2.money()
+
+        //定义类，此时的this 相当于py的self
+        function Person(firstName, lastName, money) {
+            this.firstName = firstName
+            this.lastName = lastName
+            this.money = money
+        }
+        //创建对象
+        var person3 = new Person("王", "二", function () {
+            console.log("工作")
+        })
+        //调用对象
+        console.log(person3)
+        console.log(person3.firstName)
+        person3.money()
+    </script>
+</head>
+<body>
+
+</body>
+</html>

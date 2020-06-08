@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css关系选择器</title>
+    <style>
+        /*后代选择器*/
+        /*#mydiv a{
+            color: red;
+        }*/
+
+        /*子选择器*/
+        /*#mydiv > a{
+            color: red;
+        }*/
+
+        /*并列选择器*/
+        #mydiv > a,.content{
+            font-size: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        <a href="#jingyesi">回到顶部</a>
+        <a href="#location">回到需要的位置</a>
+        <div>
+            <a href="#">看看我是什么颜色</a>
+        </div>
+    </div>
+    <div class="content">
+        <p>今天是周一</p>
+    </div>
+</body>
+</html>

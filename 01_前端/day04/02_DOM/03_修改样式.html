@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="div1">div1</div>
+<div class="div2">div2</div>
+<div class="div2">div2</div>
+<ul>
+    <li>Python</li>
+    <li>Java</li>
+    <li>UI</li>
+    <li>Test</li>
+</ul>
+<script>
+    //根据id获取
+    var div1 = document.getElementById("div1")
+    //修改样式，驼峰命名法
+    div1.style.backgroundColor = "red"
+    div1.style.fontSize = "40px"
+    div1.style.color = "white"
+</script>
+<script>
+    var lis = document.getElementsByTagName("li")
+    //循环，i是索引
+    for(var i=0;i< lis.length;i++){
+        if(i%2==0){
+            //通过索引获取对象
+            lis[i].style.backgroundColor="gray"
+        }else{
+            lis[i].style.backgroundColor="green"
+        }
+        lis[i].style.color="red"
+    }
+</script>
+<script>
+    //通过索引来获取
+    document.getElementsByClassName("div2")[1].style.fontSize = "50px"
+</script>
+</body>
+</html>
